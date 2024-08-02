@@ -1,2 +1,3 @@
-2024 UCPC 알골삼형제 팀노트
-되도록 python과 c++ 알고리즘 리스트를 똑같이
+MyteamNlte
+
+List:

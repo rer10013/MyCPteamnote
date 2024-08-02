@@ -6,4 +6,4 @@ ii = lambda: int(input().rstrip())
 def solve():
     return None
 
-solve()
+print(solve())

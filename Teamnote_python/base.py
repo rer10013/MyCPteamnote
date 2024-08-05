@@ -6,7 +6,8 @@ ii = lambda: int(input().rstrip())
 def solve():
 
     ans = 0
-    
+
     return ans
 
-print(solve())
+if __name__ == '__main__':
+    print(solve())

@@ -1,5 +1,11 @@
 'Longest Increasing Substring'
 def LCseq(string_A, string_B, dp):
+    for i in range(string_A):
+        if i in string_B:
+            break
+    else:
+        return dp, ''
+    
     seq = [0, 0, 0]
     for i in range(len(string_A)):
         for j in range(len(string_B)):

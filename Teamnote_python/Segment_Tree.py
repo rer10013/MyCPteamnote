@@ -1,3 +1,5 @@
+isi = lambda: map(int, input().rstrip().split())
+ii = lambda: int(input().rstrip())
 ''' Segment Tree '''
 class SegmentTreeSum:
     def __init__(self, data):

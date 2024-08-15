@@ -1,28 +1,24 @@
 'Longest Increasing Substring'
 def LCstr(string_A, string_B, dp):
-    for i in range(string_A):
-        if i in string_B:
-            break
-    else:
-        return dp, ''
-    
-    seq = [0, 0, 0]
-    for i in range(len(string_A)):
-        for j in range(len(string_B)):
-            if i == 0 or j == 0:
-                dp[i][j] = 0
-            elif string_A[i] == string_B[j]:
+    len_A, len_B = len(string_A), len(string_B)
+
+    max_length = 0
+    end = 0
+    for i in range(1, len_A + 1):
+        for j in range(1, len_B + 1):
+            if string_A[i - 1] == string_B[j - 1]:
                 dp[i][j] = dp[i - 1][j - 1] + 1
-                if dp[i][j] > seq[0]:
-                    seq = [dp[i][j], i, j]
+                if dp[i][j] > max_length:
+                    max_length = dp[i][j]
+                    end = i
             else:
                 dp[i][j] = 0
-                
-    end_index = seq[1]
-    length = seq[0]
-    arr = ''.join([string_A[i] for i in range(end_index - length + 1, end_index + 1)])
-    
-    return dp, arr
+
+    start = end - max_length
+    lcs = string_A[start:end]
+
+    return dp, lcs
+
 	
 
 string_A = list(input())

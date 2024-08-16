@@ -10,9 +10,9 @@ def knapsack():
     return dp[N][K]
 
 
-N, K = map(int,input().split())
-vlist = [0]
-clist = [0]
+N, K = map(int,input().split()) #N: num of product, K: final volume
+vlist = [0] # list of value
+clist = [0] # list of volume
 for i in range(N):
     iC, iV = map(int, input().split())
     vlist.append(iV)

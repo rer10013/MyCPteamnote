@@ -6,7 +6,7 @@ def LCstr(string_A, string_B, dp):
     end = 0
     for i in range(1, len_A + 1):
         for j in range(1, len_B + 1):
-            if string_A[i - 1] == string_B[j - 1]:
+            if string_A[i - 1] == string_B[j - 1]: # search same or not
                 dp[i][j] = dp[i - 1][j - 1] + 1
                 if dp[i][j] > max_length:
                     max_length = dp[i][j]
@@ -15,7 +15,7 @@ def LCstr(string_A, string_B, dp):
                 dp[i][j] = 0
 
     start = end - max_length
-    lcs = string_A[start:end]
+    lcs = string_A[start:end] #substring from start to end
 
     return dp, lcs
 

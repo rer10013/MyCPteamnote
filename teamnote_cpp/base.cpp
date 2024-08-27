@@ -3,6 +3,12 @@
 using namespace std;
 #define ll long long
 
+void init(){
+    cin.tie(0);
+    cout.tie(0);
+    ios_base::sync_with_stdio(false);
+}
+
 int solve() {
     int ans = 0;
 
@@ -12,10 +18,11 @@ int solve() {
 }
 
 int main() {
-    int N;
-    cin >> N;
+    init();
+    int T;
+    cin >> T;
     
-    for (int i = 0; i ++; i < N) {
+    while (T--) {
         solve();
     }
     

@@ -1,6 +1,6 @@
+'''Fast Fourier Transform'''
+
 import math
-import sys
-input = sys.stdin.readline
 
 def E(x):
   real = math.cos(2 * math.pi * x)

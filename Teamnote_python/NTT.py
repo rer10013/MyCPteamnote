@@ -1,6 +1,4 @@
-import math
-import sys
-input = sys.stdin.readline
+'''Number Theoretic Transform(float FFT)'''
 
 P = 998244353
 w = 3

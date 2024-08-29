@@ -1,4 +1,11 @@
 ''' Breadth First Search (BFS) '''
+
+'''
+deque 이용한 BFS, que에 업데이트 하면서 간 것으로 처리
+n: 정점수, m: 간선 수, start: 시점, x, y: 간선
+print문 이동 경로 표시
+'''
+
 from collections import deque as deq
 
 def bfs(x):

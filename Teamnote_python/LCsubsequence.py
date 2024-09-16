@@ -1,5 +1,6 @@
 'Longest Increasing Sequence'
 def LCseq(string_A, string_B, dp):
+    arr = []
     len_A, len_B = len(string_A), len(string_B)
     
     for i in range(1, len_A + 1): # edge skip due to no word
@@ -9,16 +10,16 @@ def LCseq(string_A, string_B, dp):
             else:
                 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
     
-    length = dp[len_A][len_B] # max length fix
+    cnt = dp[len_A][len_B] # max length fix
 
-    while length != 0: # arr finking: search up or right is same
-        if dp[len_A - 1][len_B] == seq[0]:
+    while cnt != 0: # arr finking: search up or right is same
+        if dp[len_A - 1][len_B] == cnt:
             len_A -= 1
-        elif dp[len_A][len_B - 1] == seq[0]:
+        elif dp[len_A][len_B - 1] == cnt:
             len_B -= 1
         else: # else append self
             arr.append(string_A[len_A - 1])
-            seq = [dp[len_A - 1][len_B - 1], len_A - 1, len_B - 1]
+            cnt -= 1
     
     lcs = ''.join(reversed(arr))
 

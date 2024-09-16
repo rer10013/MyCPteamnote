@@ -1,3 +1,12 @@
-MyteamNlte
+Madlollipop's CP Note
 
-List:
+writing method:
+'''Algo Name'''
+
+'''
+explain about Algo
+'''
+
+code
+
+usage

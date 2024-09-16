@@ -103,7 +103,7 @@ class SegmentTreeProduct:
             right //= 2
         return result
     
-class LazySegmentTree: #rangesum
+class LazySegmentTree: #rangesum with lazy propagation
     def __init__(self, data):
         self.n = len(data)
         self.tree = [0] * (2 * self.n)
@@ -166,4 +166,5 @@ class LazySegmentTree: #rangesum
     
 N, M, K = isi()
 data = [ii() for _ in range(N)]
-seg_tree = SegmentTreeSum(data)
+seg_tree = LazySegmentTree(data)
+seg_tree.update_range(1,4,5)

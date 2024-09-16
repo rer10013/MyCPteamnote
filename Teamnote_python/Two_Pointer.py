@@ -1,19 +1,18 @@
 ''' Two_pointer Alogrithm '''
-def two_pointer():
+def two_pointer(N, M): # N: len, M: target val
+    cnt = 0
+    sum = 0
     left = 0
-    right = len(arr) - 1
+    right = 0
 
-    while left < right:
-        cur_sum = arr[left] + arr[right]
-
-        if cur_sum == target:
-            return (left + 1, right + 1)
-        elif cur_sum < target:
-            left += 1
+    while left <= right and right < N:
+        if sum >= M:
+            sum -= arr[left := left+1]
+            cnt += 1
         else:
-            right -= 1
+            sum -= arr[right := right+1]
 
-    return None
+    return cnt
 
 target = int(input())
 arr = list(map(int, input().split()))
